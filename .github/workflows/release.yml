@@ -220,6 +220,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           single-commit: true
           folder: build/web # The folder the action should deploy.
+
   export-android:
     name: Android Export 🐧
     runs-on: ubuntu-latest
