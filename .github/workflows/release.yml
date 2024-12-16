@@ -220,8 +220,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           single-commit: true
           folder: build/web # The folder the action should deploy.
-  export-linux:
-    name: Linux Export 🐧
+  export-android:
+    name: Android Export 🐧
     runs-on: ubuntu-latest
     container:
       image: docker://barichello/godot-ci:4.3
