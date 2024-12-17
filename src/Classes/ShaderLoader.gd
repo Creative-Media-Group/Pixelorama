@@ -1,8 +1,8 @@
 class_name ShaderLoader
 extends RefCounted
 
-const VALUE_SLIDER_V2_TSCN := preload("res://src/UI/Nodes/ValueSliderV2.tscn")
-const BASIS_SLIDERS_TSCN := preload("res://src/UI/Nodes/BasisSliders.tscn")
+const VALUE_SLIDER_V2_TSCN := preload("res://src/UI/Nodes/Sliders/ValueSliderV2.tscn")
+const BASIS_SLIDERS_TSCN := preload("res://src/UI/Nodes/Sliders/BasisSliders.tscn")
 const GRADIENT_EDIT_TSCN := preload("res://src/UI/Nodes/GradientEdit.tscn")
 
 
@@ -62,6 +62,8 @@ static func create_ui_for_shader_uniforms(
 		var u_init := u_left_side[0].split(" ")
 		var u_type := u_init[1]
 		var u_name := u_init[2]
+		if u_name == "PXO_time":
+			continue
 		# Find custom data of the uniform, if any exists
 		# Right now it only checks if a uniform should have another type of node
 		# Such as integers having OptionButtons
