@@ -1,8 +1,11 @@
+# Godot 4+ specific ignores
+.godot/
+.nomedia
 
 # Godot-specific ignores
 .import/
-.godot/
-override.cfg
+export.cfg
+export_credentials.cfg
 
 # Imported translations (automatically generated from CSV files)
 *.translation
@@ -11,18 +14,3 @@ override.cfg
 .mono/
 data_*/
 mono_crash.*.json
-
-# System/tool-specific ignores
-.directory
-*~
-
-# Visual Studio Code ignores
-.vscode/
-
-# macOS ignores
-.DS_Store
-
-# Android ignores
-android/
-
-addons/godotsteam
